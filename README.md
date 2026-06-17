@@ -168,3 +168,42 @@ function throwError(message: string): never {
   throw new Error(message);
 }
 ```
+
+### Type Inference
+
+* **Type Inference** is a feature in TypeScript that automatically determines the type of a variable based on its assigned value.
+* It reduces the need for explicit type annotations.
+* TypeScript uses the inferred type for compile-time type checking.
+* This helps maintain type safety while writing less code.
+
+```
+// Primitive Types
+const username = "sandeepahirwar";
+const userID = 1714510036;
+const isActive = true;
+const email = null;
+const phone = undefined;
+
+console.log("Username :", username);
+console.log("User ID :", userID);
+console.log("Is Active? :", isActive);
+console.log("Email :", email);
+console.log("Phone :", phone);
+
+// Array
+const array = ["HTML", "CSS", "JS"];
+console.log("Array :", array);
+
+// Object
+const fruit = {
+  name: "Apple",
+  price: 100,
+};
+console.log("Fruit :", fruit);
+
+// Function
+function greet(name: string) {
+  return `Hello, ${name}`;
+}
+console.log(greet("Sandeep Ahirwar"));
+```
