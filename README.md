@@ -85,3 +85,20 @@
 
 * TypeScript is commonly used in hybrid mobile app frameworks.
 * It helps build cross-platform mobile applications that run on both Android and iOS from a single codebase.
+
+### Installing TypeScript
+
+```
+npm install -g typescript
+```
+
+#### What is npm?
+
+* **npm ( Node Package Manager )** is a **command-line tool ( CLI )** used to install, uninstall, update, and manage JavaScript packages and modules.
+
+### Running a TypeScript File
+
+* `node index.ts` → Generally not used in the traditional TypeScript workflow because Node.js executes JavaScript files.
+* `tsc index.ts` → Compiles a TypeScript file into JavaScript.
+* `ts-node index.ts` → Compiles and executes a TypeScript file directly.
+* `tsc index.ts -w` → Watches TypeScript files and automatically recompiles them whenever changes are detected.
