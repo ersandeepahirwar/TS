@@ -207,3 +207,44 @@ function greet(name: string) {
 }
 console.log(greet("Sandeep Ahirwar"));
 ```
+
+### Operators in TypeScript
+
+#### Arithmetic Operators
+
+* The `+` operator can be used for both **numeric addition** and **string concatenation**.
+* For `-`, `*`, `/`, `%`, and `**` operators, both operands must be of type **number**.
+
+```
+console.log(10 + "5");
+console.log(10 + 5);
+console.log(10 - 5);
+console.log(10 * 5);
+console.log(10 / 5);
+console.log(10 % 5);
+console.log(10 ** 5);
+```
+
+> * Assignment operators and shorthand assignment operators are the same as in JavaScript.
+
+#### Relational Operators
+
+* In relational operators, both operands should have the **same type**.
+
+```
+console.log(10 < 15);
+console.log("10" < "15");
+```
+
+#### Logical Operators
+
+* In logical operators, the first operand must be **`true`**, **`false`**, **`1`**, or **`0`** ( boolean-compatible values ).
+
+```
+console.log(1 && 5);
+console.log(0 && 5);
+console.log(true && 5);
+console.log(false && 5);
+```
+
+> * **Bitwise operators**, **conditional ( ternary ) operators**, **increment (`++`)**, and **decrement (`--`)** operators work the same way as in JavaScript.
