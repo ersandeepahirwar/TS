@@ -249,7 +249,7 @@ console.log(false && 5);
 
 > * **Bitwise operators**, **conditional ( ternary ) operators**, **increment (`++`)**, and **decrement (`--`)** operators work the same way as in JavaScript.
 
-### Flow Control Statements and Loops
+### Flow Control Statements and Loops in TypeScript
 
 ```
 const n: number = 9;
@@ -276,7 +276,7 @@ if (number < 2) {
 }
 ```
 
-### Functions
+### Functions in TypeScript
 
 ```
 // Function Declaration
