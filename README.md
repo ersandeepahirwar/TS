@@ -563,3 +563,75 @@ const friend: Friend = {
 };
 console.log(friend);
 ```
+
+### OOPs
+
+#### Class and Object
+
+* A **class** is a blueprint for creating objects.
+* An **object** is an instance of a class.
+
+#### Access Modifiers
+
+* `public` – Accessible from anywhere.
+* `protected` – Accessible within the class and its derived classes.
+* `private` – Accessible only within the class.
+
+Example :
+
+```
+class Parent {
+  public A = 10;
+  protected B = 20;
+  private C = 30;
+  display() {
+    console.log(
+      `In display() of Parent Class, A = ${this.A}, B = ${this.B} and C = ${this.C}`,
+    );
+  }
+}
+
+class Child extends Parent {
+  show() {
+    console.log(`In show() of Child Class, A = ${this.A} and B = ${this.B}`);
+  }
+}
+
+const object = new Child();
+
+object.display();
+object.show();
+console.log(`From Object, A = ${object.A}`);
+```
+
+#### Abstract Class
+
+An abstract class is a class that cannot be instantiated directly. It is used as a base class for other classes.
+
+Key Points :
+
+* Cannot create objects of an abstract class.
+* Can contain both abstract and regular methods.
+* Derived classes must implement all abstract methods.
+
+Example :
+
+```
+abstract class Shape {
+  display(shape: string) {
+    console.log(`Shape : ${shape}`);
+  }
+  abstract area(radius: number): number;
+}
+
+class Circle extends Shape {
+  area(radius: number): number {
+    return 3.14 * Math.pow(radius, 2);
+  }
+}
+
+const circle = new Circle();
+
+circle.display("Circle");
+console.log(`Area : ${circle.area(5)}`);
+```
