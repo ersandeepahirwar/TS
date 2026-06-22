@@ -635,3 +635,30 @@ const circle = new Circle();
 circle.display("Circle");
 console.log(`Area : ${circle.area(5)}`);
 ```
+
+### Promise
+
+A Promise is an object that represents the eventual completion or failure of an asynchronous operation.
+
+#### Promise States
+
+* **Pending** – The operation is still in progress.
+* **Fulfilled** – The operation completed successfully.
+* **Rejected** – The operation failed.
+
+```
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Promise is resolved.");
+    reject("Promise is rejected.");
+  }, 2000);
+});
+
+promise
+  .then((value) => {
+    console.log(value);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+```
