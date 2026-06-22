@@ -431,3 +431,135 @@ console.log(
 var fruit: any = "Apple";
 console.log((fruit as string).toLocaleUpperCase());
 ```
+
+### Objects
+
+#### Type Alias
+
+A TypeScript object type alias provides a way to assign a name to a specific object structure.
+
+**Benefits :**
+
+* Improves code readability and maintainability.
+* Allows the reuse of complete type definitions.
+
+**Syntax :**
+
+* Use the `type` keyword.
+* Specify the alias name.
+* Define the object structure.
+
+```
+type Student = {
+  ID: number;
+  name: string;
+  CGPA: number;
+  education: string[];
+};
+
+const student: Student = {
+  ID: 1714510036,
+  name: "Sandeep Ahirwar",
+  CGPA: 6.9,
+  education: ["B.Tech", "SRGI Jhansi"],
+};
+console.log(student);
+```
+
+#### Interface
+
+An interface is a syntactical contract that an entity should conform to. In other words, an interface defines the syntax that an entity must follow.
+
+Interfaces define properties, methods, and events, which are the members of the interface.
+
+**Benefits :**
+
+* Provides a standard structure for implementing objects.
+* Improves code consistency and maintainability.
+
+**Key Points :**
+
+* Interfaces contain only member declarations.
+* It is the responsibility of the implementing object to define the members.
+* Implementing objects must follow the structure defined by the interface.
+
+```
+interface Employee {
+  ID: number;
+  name: string;
+  designation: string;
+}
+
+const employee: Employee = {
+  ID: 1623157,
+  name: "John Doe",
+  designation: "Software Engineer",
+};
+console.log(employee);
+```
+
+### Readonly and Optional Properties
+
+#### Readonly Properties
+
+Readonly properties cannot be modified after they are initialized. They help prevent accidental changes to object properties.
+
+Benefits :
+
+* Improves data integrity.
+* Prevents unintended modifications.
+
+```
+type Fruit = {
+  readonly name: string;
+  price: number;
+};
+
+const fruit: Fruit = {
+  name: "Apple",
+  price: 100,
+};
+console.log(fruit);
+
+interface Animal {
+  readonly name: string;
+  weight: number;
+}
+
+const animal: Animal = {
+  name: "Elephant",
+  weight: 870,
+};
+console.log(animal);
+```
+
+#### Optional Properties
+
+Optional properties are not required when creating an object. They are defined using the `?` operator after the property name.
+
+Benefits :
+
+* Provides flexibility when defining objects.
+* Allows properties to be omitted when they are not needed.
+
+```
+type Language = {
+  name: string;
+  origin?: number;
+};
+
+const language: Language = {
+  name: "Hindi",
+};
+console.log(language);
+
+interface Friend {
+  name: string;
+  age?: number;
+}
+
+const friend: Friend = {
+  name: "Himanshu Savita",
+};
+console.log(friend);
+```
